@@ -1,7 +1,10 @@
 package com.itp.salary.servlets;
 
 import java.io.IOException;
+<<<<<<< HEAD
 import java.text.SimpleDateFormat;
+=======
+>>>>>>> 1772941fc43ff5d4ecd96f9b816345fef7bd9308
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -44,6 +47,7 @@ public class AttendanceList extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		Attendance attendance=new Attendance();
+<<<<<<< HEAD
 	
 			java.util.Date date;
 			try {
@@ -60,6 +64,13 @@ public class AttendanceList extends HttpServlet {
 			}
 	
 		 
+=======
+		attendance.setEmp_Id(request.getParameter("Emp_Id"));
+		attendance.setDate(request.getParameter("date"));
+		attendance.setArrival_time(request.getParameter("Arrival_time"));
+		attendance.setDeparture_time(request.getParameter("Departure_time"));
+		
+>>>>>>> 1772941fc43ff5d4ecd96f9b816345fef7bd9308
 		IAttendance iAttendance=new IAttendanceImpl();
 		iAttendance.addAttendance(attendance);
 		

@@ -1,6 +1,8 @@
 package com.itp.distribution.servlets;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.itp.distribution.model.DistItem;
-import com.itp.distribution.model.DistShop;
 import com.itp.distribution.services.IDistItem;
 import com.itp.distribution.services.IDistItemImpl;
 
@@ -46,13 +47,23 @@ public class addDistItemServlet extends HttpServlet {
 		
 		DistItem distItem = new DistItem();
 		
+		try {
+			java.util.Date date = new SimpleDateFormat("yyyy-MM-dd").parse(request.getParameter("date"));
+			//distItem.setDate(date);
+			java.sql.Date sqlDate = new java.sql.Date(date.getTime());
+		
+		
 		distItem.setDistributedCode(request.getParameter("distributioncode"));
 		distItem.setItemCode(request.getParameter("itemcode"));
 		distItem.setShopId(request.getParameter("shopid"));
 		distItem.setDistributedCount(Integer.parseInt(request.getParameter("distributioncount")));
 		distItem.setReturnedCount(Integer.parseInt(request.getParameter("returncount")));
 		distItem.setIncome(Integer.parseInt(request.getParameter("income")));
-		distItem.setDate(request.getParameter("date"));
+		distItem.setDate(sqlDate);
+		
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 		
 		IDistItem idistitem1 = new IDistItemImpl();
 		idistitem1.addDistItem(distItem);

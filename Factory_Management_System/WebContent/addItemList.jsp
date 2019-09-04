@@ -182,13 +182,13 @@
 						%>
 
 						<tr>
-							<td><%=distitemi.getDistributedCode()%></td>
-							<td><%=distitemi.getItemCode()%></td>
-							<td><%=distitemi.getShopId()%></td>
-							<td><%=distitemi.getDistributedCount()%></td>
-							<td><%=distitemi.getReturnedCount()%></td>
-							<td><%=distitemi.getIncome()%></td>
-							<td><%=distitemi.getDate()%></td>
+							<td><%= distitemi.getDistributedCode() %></td>
+							<td><%= distitemi.getItemCode()%></td>
+							<td><%= distitemi.getShopId()%></td>
+							<td><%= distitemi.getDistributedCount()%></td>
+							<td><%= distitemi.getReturnedCount()%></td>
+							<td><%= distitemi.getIncome()%></td>
+							<td><%= distitemi.getDate()%></td>
 							<!--  -->
 							<td><button class="btn btn-success">
 									<i class="fas fa-pen-square" style="font-size: 15px;"></i>

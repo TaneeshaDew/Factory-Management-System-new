@@ -136,3 +136,7 @@ body {
     color:#4e5052;
     text-transform: capitalize; all: 
 }
+.content
+{
+	margin-top:-20px;
+}

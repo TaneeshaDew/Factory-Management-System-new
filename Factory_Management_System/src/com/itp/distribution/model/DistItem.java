@@ -1,5 +1,7 @@
 package com.itp.distribution.model;
 
+import java.sql.Date;
+
 public class DistItem {
 	
 	private String distributedCode;
@@ -14,7 +16,7 @@ public class DistItem {
 	
 	private int income;
 	
-	private String date;
+	private Date date;
 
 	public String getDistributedCode() {
 		return distributedCode;
@@ -64,11 +66,11 @@ public class DistItem {
 		this.income = income;
 	}
 
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 	

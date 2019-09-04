@@ -5,7 +5,7 @@ import java.sql.Date;
 public class product {
 	
 	
-private String pname;
+	private String pname;
 	private String pid;
 	private int pstore;
 	private Date date;

@@ -26,7 +26,7 @@ public class IDistItemImpl implements IDistItem{
 			pt.setInt(4, distribuItem.getDistributedCount());
 			pt.setInt(5, distribuItem.getReturnedCount());
 			pt.setInt(6, distribuItem.getIncome());
-			pt.setString(7, distribuItem.getDate());
+			pt.setDate(7, distribuItem.getDate());
 			
 			pt.executeUpdate();
 			pt.close();
@@ -61,7 +61,7 @@ public class IDistItemImpl implements IDistItem{
 				di1.setDistributedCount(Integer.parseInt(res.getString("distributedcount")));
 				di1.setReturnedCount(Integer.parseInt(res.getString("returncount")));
 				di1.setIncome(Integer.parseInt(res.getString("income")));
-				di1.setDate(res.getString("date"));
+				di1.setDate(res.getDate("date"));
 				
 				datarate.add(di1);
 				

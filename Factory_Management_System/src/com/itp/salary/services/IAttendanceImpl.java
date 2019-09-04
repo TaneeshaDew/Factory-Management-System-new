@@ -19,7 +19,11 @@ public class IAttendanceImpl implements IAttendance{
 		try {
 			PreparedStatement pStatement = conn.prepareStatement("INSERT INTO dailyattendance_table values(?,?,?,?)");
 			pStatement.setString(1,addattendance.getEmp_Id());
+<<<<<<< HEAD
 			pStatement.setDate(2, addattendance.getDate());
+=======
+			pStatement.setString(2, addattendance.getDate());
+>>>>>>> 1772941fc43ff5d4ecd96f9b816345fef7bd9308
 			pStatement.setString(3, addattendance.getArrival_time());
 			pStatement.setString(4, addattendance.getDeparture_time());
 			pStatement.executeUpdate();
@@ -43,7 +47,11 @@ public class IAttendanceImpl implements IAttendance{
 			while(res.next()) {
 				Attendance Vattendance=new Attendance();
 				Vattendance.setEmp_Id(res.getString("Emp_Id"));
+<<<<<<< HEAD
 				Vattendance.setDate(res.getDate("date"));
+=======
+				Vattendance.setDate(res.getString("date"));
+>>>>>>> 1772941fc43ff5d4ecd96f9b816345fef7bd9308
 				Vattendance.setArrival_time(res.getString("Arrival_time"));
 				Vattendance.setDeparture_time(res.getString("Departure_time"));
 				

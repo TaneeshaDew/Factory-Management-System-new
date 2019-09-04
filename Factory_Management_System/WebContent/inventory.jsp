@@ -26,9 +26,9 @@
 	<jsp:include page="commonheader.jsp"></jsp:include>
     
     <!--****End of header*** -->
-     <br><br>
+     <br>
      <h2 class="text-light"><center>Inventory Management<center></h2>
-     <br><br><br>
+     
   
     <div class="container">
      <div class="row">
@@ -40,7 +40,7 @@
            </div>
           <div class="card-content"> 
            <h3  class="title">Add Store</h3>
-               <span class="post"> add a new Store</span> 
+               <span class="post"> add new Store</span> 
            </div>
           <div class="bt"> <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModalCenter">Add Store</button></div>
           
@@ -74,7 +74,7 @@
          </div>
          <div class="card-content">
            <h3  class="title">Add Product</h3>
-               <span class="post">add a new Product</span>
+               <span class="post">add new Product</span>
           </div>
           <div class="bt"> <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModalCenter1">Add Products</button></div>
        <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
